@@ -1,0 +1,722 @@
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&display=swap");
+
+:root {
+  --color-gold: #ddad46;
+  --color-dark-gold: #d4a137;
+  --color-bg: #0e0e0e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  body {
+    font-family: "Ibarra Real Nova", serif;
+    background: var(--color-bg);
+    color: #fff;
+    line-height: 1.8;
+    overflow-x: hidden;
+
+    .hero {
+      width: 100%;
+      height: clamp(35vh, 45vh, 50vh);
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+        url("../assets/img/Hero-Team.jpg") center/cover no-repeat;
+      position: relative;
+      z-index: 20;
+      margin-top: 8vh;
+    }
+
+    .team-section {
+      width: 100%;
+      padding: 8rem 4vw 10rem 4vw;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+
+      .team-wrapper {
+        width: 100%;
+        max-width: 1000px;
+        position: relative;
+        text-align: center;
+        border: 1px solid var(--color-dark-gold);
+        padding: 6rem 4rem;
+        background: rgba(15, 15, 15, 0.8);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+
+        @media (max-width: 768px) {
+          padding: 4rem 2rem;
+        }
+
+        .text-header {
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 180px;
+          height: 60px;
+        }
+
+        .team-title {
+          font-size: clamp(2.8rem, 4vw, 4.5rem);
+          color: #fff;
+          letter-spacing: 0.5rem;
+          margin-bottom: 3rem;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .team-intro {
+          width: min(90%, 800px);
+          margin: 0 auto 2rem auto;
+          font-size: clamp(1.5rem, 1.8vw, 2rem);
+          color: var(--color-gold);
+          line-height: 1.6;
+          font-weight: 400;
+          font-style: italic;
+        }
+
+        .team-description {
+          width: min(95%, 850px);
+          margin: 0 auto 5rem auto;
+          font-size: clamp(1.4rem, 1.6vw, 1.7rem);
+          color: #e5e7eb;
+          line-height: 1.8;
+          font-weight: 300;
+          text-align: justify;
+          text-align-last: center;
+
+          .gold-text {
+            color: var(--color-gold);
+            font-size: 1.6rem;
+            letter-spacing: 0.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+          }
+        }
+
+        .team-grid.base {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 3rem;
+          width: 100%;
+          justify-content: center;
+        }
+
+        .team-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 3rem;
+          width: 100%;
+          justify-content: center;
+
+          @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+          }
+
+          .team-card {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--color-dark-gold);
+            background: #0a0a0a;
+            transition:
+              transform 0.4s ease,
+              box-shadow 0.4s ease;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+
+            &[href]:hover {
+              cursor: pointer;
+              transform: translateY(-8px);
+              box-shadow: 0 15px 30px rgba(212, 161, 55, 0.15);
+            }
+
+            &.static-card {
+              cursor: default;
+              &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 10px 25px rgba(212, 161, 55, 0.1);
+              }
+            }
+
+            .team-photo {
+              width: 100%;
+              aspect-ratio: 1 / 1;
+              object-fit: cover;
+              border-bottom: 1px solid rgba(212, 161, 55, 0.3);
+            }
+
+            .card-text {
+              padding: 2.5rem 2rem;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              flex-grow: 1;
+
+              h3 {
+                color: var(--color-gold);
+                font-size: clamp(1.6rem, 1.8vw, 2rem);
+                letter-spacing: 0.15rem;
+                text-transform: uppercase;
+                font-weight: 500;
+                margin-bottom: 1.2rem;
+                line-height: 1.4;
+
+                span {
+                  color: #fff;
+                  font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+                  letter-spacing: 0.05rem;
+                  display: block;
+                  margin-top: 0.3rem;
+                }
+              }
+
+              p {
+                color: #d1d5db;
+                font-size: clamp(1.3rem, 1.4vw, 1.5rem);
+                font-weight: 300;
+                line-height: 1.6;
+              }
+            }
+          }
+
+          &.sommelier-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            max-width: 100%;
+            margin-top: 4rem;
+
+            .sommelier-card {
+              flex-direction: row;
+              align-items: center;
+              text-align: left;
+              padding: 2.5rem;
+              gap: 4rem;
+
+              .team-photo {
+                width: 35%;
+                max-width: 250px;
+                border-bottom: none;
+                border: 1px solid rgba(212, 161, 55, 0.3);
+              }
+
+              .card-text {
+                width: 65%;
+                padding: 0;
+                align-items: flex-start;
+                text-align: left;
+
+                h3 {
+                  margin-bottom: 2rem;
+
+                  span {
+                    display: inline;
+                    margin-top: 0;
+                    margin-left: 0.5rem;
+                  }
+                }
+
+                p {
+                  margin-bottom: 2.5rem;
+                }
+
+                .social-icons {
+                  display: flex;
+                  gap: 1.2rem;
+                  margin-top: auto;
+
+                  a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2.8rem;
+                    height: 2.8rem;
+                    border: 1px solid var(--color-gold);
+                    color: var(--color-gold);
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                      background: var(--color-gold);
+                      color: #000;
+                    }
+                  }
+                }
+              }
+
+              @media (max-width: 768px) {
+                flex-direction: column;
+                text-align: center;
+                gap: 2.5rem;
+
+                .team-photo {
+                  width: 100%;
+                  max-width: 300px;
+                }
+
+                .card-text {
+                  width: 100%;
+                  align-items: center;
+                  text-align: center;
+
+                  h3 span {
+                    display: block;
+                    margin-left: 0;
+                    margin-top: 0.5rem;
+                  }
+
+                  .social-icons {
+                    justify-content: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .kitchen-hierarchy {
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+          margin-top: 4rem;
+
+          .hierarchy-box {
+            border: 1px solid var(--color-gold);
+            padding: 3rem;
+
+            .box-title {
+              color: #fff;
+              font-size: clamp(1.6rem, 2vw, 2rem);
+              letter-spacing: 0.2rem;
+              margin-bottom: 3rem;
+              text-align: center;
+              font-weight: 500;
+            }
+
+            .chef-img {
+              border: 1px solid var(--color-gold);
+              width: 100%;
+              object-fit: cover;
+            }
+
+            .social-icons {
+              display: flex;
+              gap: 1.2rem;
+              margin-top: 1.5rem;
+
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.8rem;
+                height: 2.8rem;
+                border: 1px solid var(--color-gold);
+                color: var(--color-gold);
+                text-decoration: none;
+                font-size: 1.3rem;
+                transition: all 0.3s ease;
+
+                &:hover {
+                  background: var(--color-gold);
+                  color: #000;
+                }
+              }
+            }
+          }
+
+          .head-chef-box {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            text-align: left;
+
+            .chef-img {
+              width: 35%;
+              max-width: 250px;
+              aspect-ratio: 1 / 1;
+            }
+
+            .chef-info {
+              width: 65%;
+
+              h3 {
+                color: #fff;
+                font-size: clamp(1.6rem, 2vw, 1.8rem);
+                letter-spacing: 0.15rem;
+                text-transform: uppercase;
+                margin-bottom: 1.5rem;
+                font-weight: 500;
+
+                span {
+                  color: var(--color-gold);
+                }
+              }
+
+              p {
+                color: #d1d5db;
+                font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+                line-height: 1.6;
+                font-weight: 300;
+              }
+            }
+
+            @media (max-width: 768px) {
+              flex-direction: column;
+              text-align: center;
+
+              .chef-img {
+                width: 100%;
+                max-width: 300px;
+              }
+
+              .chef-info {
+                width: 100%;
+              }
+
+              .social-icons {
+                justify-content: center;
+              }
+            }
+          }
+
+          .sous-chefs-box {
+            .sous-grid {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 4rem;
+              max-width: 750px;
+              margin: 0 auto;
+
+              .sous-card {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+
+                .chef-img {
+                  aspect-ratio: 1 / 1;
+                  margin-bottom: 2rem;
+                  max-width: 200px;
+                  width: 100%;
+                }
+
+                h4 {
+                  color: #fff;
+                  font-size: 1.6rem;
+                  margin-bottom: 0.5rem;
+                  font-weight: 500;
+                  letter-spacing: 0.1rem;
+                }
+
+                p {
+                  color: #d1d5db;
+                  font-size: 1.3rem;
+                  line-height: 1.5;
+                  font-weight: 300;
+                }
+              }
+            }
+
+            @media (max-width: 768px) {
+              .sous-grid {
+                grid-template-columns: 1fr;
+                gap: 5rem;
+
+                .sous-card {
+                  align-items: center;
+                  text-align: center;
+
+                  .chef-img {
+                    margin: 0 auto 2rem auto;
+                  }
+
+                  .social-icons {
+                    justify-content: center;
+                  }
+                }
+              }
+            }
+          }
+
+          .zone-chefs-box {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            padding: 2.5rem;
+
+            .zone-card {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+
+              .chef-img {
+                aspect-ratio: 1 / 1;
+                margin-bottom: 1.5rem;
+              }
+
+              h4 {
+                color: var(--color-gold);
+                font-size: 1.2rem;
+                letter-spacing: 0.1rem;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+                line-height: 1.3;
+              }
+
+              span {
+                color: #fff;
+                font-size: 1.3rem;
+                font-weight: 300;
+              }
+
+              .social-icons {
+                justify-content: center;
+                gap: 0.8rem;
+                margin-top: 1rem;
+
+                a {
+                  width: 2.4rem;
+                  height: 2.4rem;
+                  font-size: 1.1rem;
+                }
+              }
+            }
+
+            @media (max-width: 900px) {
+              grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+              gap: 4rem 2rem;
+            }
+          }
+        }
+
+        .service-hierarchy {
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+          margin-top: 4rem;
+
+          .hierarchy-box {
+            border: 1px solid var(--color-gold);
+            padding: 3rem;
+
+            .box-title {
+              color: #fff;
+              font-size: clamp(1.6rem, 2vw, 2rem);
+              letter-spacing: 0.2rem;
+              margin-bottom: 3rem;
+              text-align: center;
+              font-weight: 500;
+            }
+            .staff-img {
+              border: 1px solid var(--color-gold);
+              width: 100%;
+              object-fit: cover;
+            }
+            .social-icons {
+              display: flex;
+              gap: 1.2rem;
+              margin-top: 1.5rem;
+
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.8rem;
+                height: 2.8rem;
+                border: 1px solid var(--color-gold);
+                color: var(--color-gold);
+                text-decoration: none;
+                font-size: 1.3rem;
+                transition: all 0.3s ease;
+
+                &:hover {
+                  background: var(--color-gold);
+                  color: #000;
+                }
+              }
+            }
+          }
+
+          .maitre-box {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            text-align: left;
+
+            .staff-img {
+              width: 35%;
+              max-width: 250px;
+              aspect-ratio: 1 / 1;
+            }
+            .staff-info {
+              width: 65%;
+
+              h3 {
+                color: #fff;
+                font-size: clamp(1.6rem, 2vw, 1.8rem);
+                letter-spacing: 0.15rem;
+                text-transform: uppercase;
+                margin-bottom: 1.5rem;
+                font-weight: 500;
+
+                span {
+                  color: var(--color-gold);
+                }
+              }
+              p {
+                color: #d1d5db;
+                font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+                line-height: 1.6;
+                font-weight: 300;
+              }
+            }
+          }
+
+          .captains-box {
+            .captains-grid {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 4rem;
+              max-width: 750px;
+              margin: 0 auto;
+
+              .captain-card {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+
+                .staff-img {
+                  aspect-ratio: 1 / 1;
+                  margin-bottom: 2rem;
+                  max-width: 200px;
+                  width: 100%;
+                }
+                h4 {
+                  color: #fff;
+                  font-size: 1.6rem;
+                  margin-bottom: 0.5rem;
+                  font-weight: 500;
+                  letter-spacing: 0.1rem;
+                }
+                p {
+                  color: #d1d5db;
+                  font-size: 1.3rem;
+                  line-height: 1.5;
+                  font-weight: 300;
+                }
+              }
+            }
+          }
+
+          .floor-staff-box {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            padding: 2.5rem;
+
+            .floor-card {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+
+              .staff-img {
+                aspect-ratio: 1 / 1;
+                margin-bottom: 1.5rem;
+              }
+              h4 {
+                color: var(--color-gold);
+                font-size: 1.2rem;
+                letter-spacing: 0.1rem;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+                line-height: 1.3;
+              }
+              span {
+                color: #fff;
+                font-size: 1.3rem;
+                font-weight: 300;
+              }
+              .social-icons {
+                justify-content: center;
+                gap: 0.8rem;
+                margin-top: 1rem;
+
+                a {
+                  width: 2.4rem;
+                  height: 2.4rem;
+                  font-size: 1.1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html body .team-section .team-wrapper .service-hierarchy {
+    .maitre-box {
+      flex-direction: column;
+      text-align: center;
+
+      .staff-img {
+        width: 100%;
+        max-width: 300px;
+      }
+      .staff-info {
+        width: 100%;
+      }
+      .social-icons {
+        justify-content: center;
+      }
+    }
+    .captains-box {
+      .captains-grid {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+
+        .captain-card {
+          align-items: center;
+          text-align: center;
+
+          .staff-img {
+            margin: 0 auto 2rem auto;
+          }
+
+          .social-icons {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html body .team-section .team-wrapper .service-hierarchy {
+    .floor-staff-box {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 40px 20px;
+    }
+  }
+}

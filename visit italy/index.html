@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Italy | Official National Tourism Office</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <nav class="main-navigation">
+        <input type="checkbox" id="mobile-menu-cb" class="mobile-menu-checkbox">
+        <div class="container navigation-container">
+            <a href="index.html" class="logo">ITALIA<span>.</span></a>
+            <div class="nav-links-desktop">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="routes.html" class="nav-link">Routes</a>
+                <a href="contact.html" class="btn-plan-trip">Plan Trip</a>
+            </div>
+            <label for="mobile-menu-cb" class="mobile-menu-toggle"><i class="fas fa-bars"></i></label>
+        </div>
+        <div class="mobile-menu-dropdown">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="destinations.html" class="mobile-link">Destinations</a>
+            <a href="routes.html" class="mobile-link">Routes</a>
+            <a href="contact.html" class="mobile-link highlight">Contact Us</a>
+        </div>
+    </nav>
+    <main>
+        <header class="hero-section">
+            <div class="container hero-content">
+                <h2 class="hero-subtitle">Where History Meets Luxury</h2>
+                <h1 class="hero-title">VISIT ITALY</h1>
+                <div class="hero-actions">
+                    <a href="destinations.html" class="btn btn-primary">DISCOVER PLACES</a>
+                    <a href="routes.html" class="btn btn-secondary">VIEW ROUTES</a>
+                </div>
+            </div>
+        </header>
+        <section class="mosaic-gallery-wrapper">
+            <div class="container text-center text-white mb-large">
+                <h3 class="section-heading-serif-white">Iconic Views</h3>
+                <p class="section-intro-text">Click an image to explore Italy's most treasured locations.</p>
+            </div>
+            <div class="mosaic-grid" id="gallery-grid">
+                <div class="mosaic-item mosaic-item--venice" id="item-venice">
+                    <img src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&q=80&w=1200" alt="Venice">
+                    <button class="btn-close-gallery">x</button>
+                    <div class="btn-toggle-text"><i class="fas fa-eye"></i></div>
+                    <div class="item-overlay">
+                        <h4 class="overlay-title">Venice</h4>
+                        <p class="overlay-description">Venice is not just a city; it is a miracle built on water. Composed of 118 small islands separated by canals and linked by over 400 bridges, it is an engineering marvel and a sanctuary of art. From the Byzantine grandeur of St. Mark's Basilica to the Gothic elegance of the Doge's Palace, every corner tells a story of maritime power and romantic decline.</p>
+                    </div>
+                </div>
+                <div class="mosaic-item mosaic-item--rome" id="item-rome">
+                    <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&q=80&w=1200" alt="Rome">
+                    <button class="btn-close-gallery">x</button>
+                    <div class="btn-toggle-text"><i class="fas fa-eye"></i></div>
+                    <div class="item-overlay">
+                        <h4 class="overlay-title">Rome</h4>
+                        <p class="overlay-description">The Eternal City stands as a living museum of human civilization. For nearly 3,000 years, Rome has been a global center of power, culture, and religion. Walk the sacred stones of the Forum where Caesars ruled, stand in the shadow of the colossal Colosseum, and cross the border into Vatican City to witness Michelangelo's divine frescoes.</p>
+                    </div>
+                </div>
+                <div class="mosaic-item mosaic-item--florence" id="item-florence">
+                    <img src="https://plus.unsplash.com/premium_photo-1676288635850-cd91d5b2a3af?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Florence">
+                    <button class="btn-close-gallery">x</button>
+                    <div class="btn-toggle-text"><i class="fas fa-eye"></i></div>
+                    <div class="item-overlay">
+                        <h4 class="overlay-title">Florence</h4>
+                        <p class="overlay-description">The Cradle of the Renaissance, Florence is a city-sized masterpiece. Under the patronage of the Medici family, it gave birth to the modern world's artistic and scientific heritage. Dominated by Brunelleschi's magnificent terracotta dome, the city invites you to explore the Uffizi Gallery, cross the jewelry-laden Ponte Vecchio, and stand before David's marble perfection.</p>
+                    </div>
+                </div>
+                <div class="mosaic-item mosaic-item--bottom-1" id="item-milan">
+                    <img src="https://images.unsplash.com/photo-1513581166391-887a96ddeafd?auto=format&fit=crop&q=80&w=1200" alt="Milan">
+                    <button class="btn-close-gallery">x</button>
+                    <div class="btn-toggle-text"><i class="fas fa-eye"></i></div>
+                    <div class="item-overlay"><h4 class="overlay-title">Milan</h4><p class="overlay-description">Italy's window to the future. Milan is the global capital of fashion and design, a fast-paced metropolis where innovation meets tradition. The breathtaking Gothic Duomo, with its thousands of spires, stands in contrast to the modern skyscrapers of Porta Nuova. It is the home of Da Vinci's "Last Supper".</p></div>
+                </div>
+                <div class="mosaic-item mosaic-item--bottom-2" id="item-naples">
+                    <img src="https://images.unsplash.com/photo-1527208043690-e3db1cc93456?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Naples">
+                    <button class="btn-close-gallery">x</button>
+                    <div class="btn-toggle-text"><i class="fas fa-eye"></i></div>
+                    <div class="item-overlay"><h4 class="overlay-title">Naples</h4><p class="overlay-description">Naples is a city of raw energy, deep history, and unparalleled flavor. As one of the oldest continuously inhabited cities in the world, its historic center is a UNESCO World Heritage site. It is the birthplace of pizza, the gateway to Pompeii and Mount Vesuvius, and a place where life is lived passionately in the streets.</p></div>
+                </div>
+                <div class="mosaic-item mosaic-item--bottom-3" id="item-sicily">
+                    <img src="https://plus.unsplash.com/premium_photo-1716236651666-606f1df1710b?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sicily">
+                    <button class="btn-close-gallery">x</button>
+                    <div class="btn-toggle-text"><i class="fas fa-eye"></i></div>
+                    <div class="item-overlay"><h4 class="overlay-title">Sicily</h4><p class="overlay-description">The largest island in the Mediterranean is a crossroads of civilizations. Greek temples stand prouder here than in Athens, Norman mosaics glitter in Palermo, and Arab influences flavor the cuisine. Dominated by the smoking peak of Mount Etna, Sicily offers a landscape of dramatic contrasts, turquoise waters, and ancient myths.</p></div>
+                </div>
+                <div class="mosaic-item mosaic-item--bottom-4" id="item-dolomites">
+                    <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&q=80&w=1200" alt="Dolomites">
+                    <button class="btn-close-gallery">x</button>
+                    <div class="btn-toggle-text"><i class="fas fa-eye"></i></div>
+                    <div class="item-overlay"><h4 class="overlay-title">The Dolomites</h4><p class="overlay-description">A vertical wonderland of pale limestone peaks that turn pink at sunset. The Dolomites offer some of the most spectacular mountain scenery on Earth. A paradise for skiers in winter and hikers in summer, this region blends Italian style with Austrian precision, offering cozy alpine huts and Michelin-starred dining.</p></div>
+                </div>
+            </div>
+        </section>
+        <section class="history-section section-padding">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="subtitle-green">Heritage</span>
+                    <h2 class="title-serif-dark">A Journey Through Time</h2>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-entry">
+                        <div class="timeline-image"><img src="https://plus.unsplash.com/premium_photo-1721163121835-70e361a3c306?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ancient Italy"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-text">
+                            <span class="timeline-date">753 BC – 27 BC</span>
+                            <h3 class="timeline-heading">Ancient Italy & The Republic</h3>
+                            <p>Before Rome ruled the world, the Etruscans and Greek colonies flourished in Italy. The legend of Romulus and Remus marks Rome's foundation in 753 BC. Following the overthrow of the monarchy, the Republic was established, setting the stage for expansion across the Mediterranean.</p>
+                            <a href="https://en.wikipedia.org/wiki/Roman_Republic" target="_blank" class="learn-more-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="timeline-entry entry-reverse">
+                        <div class="timeline-image"><img src="https://images.unsplash.com/photo-1568132930457-20ac2189f20b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Roman Empire"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-text text-right">
+                            <span class="timeline-date">27 BC – 476 AD</span>
+                            <h3 class="timeline-heading">The Roman Empire</h3>
+                            <p>Augustus became the first Emperor, initiating the Pax Romana, a golden age of peace and stability. During this era, architectural marvels like the Colosseum and Pantheon were constructed. Rome became the "Caput Mundi" (Capital of the World), laying the foundations for Western law, language, and engineering.</p>
+                            <a href="https://whc.unesco.org/en/list/91/" target="_blank" class="learn-more-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="timeline-entry">
+                        <div class="timeline-image"><img src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&q=80&w=800" alt="Middle Ages"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-text">
+                            <span class="timeline-date">V – XIV Century</span>
+                            <h3 class="timeline-heading">Middle Ages & Maritime Powers</h3>
+                            <p>After the fall of the Western Empire, Italy became a mosaic of kingdoms. Powerful Maritime Republics emerged—Venice, Genoa, Pisa, and Amalfi. They dominated Mediterranean trade routes, connecting East and West, and accumulating immense wealth and cultural influence.</p>
+                            <a href="https://en.wikipedia.org/wiki/Maritime_republics" target="_blank" class="learn-more-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="timeline-entry entry-reverse">
+                        <div class="timeline-image"><img src="https://images.unsplash.com/photo-1561648387-3489dc3eec6e?q=80&w=1274&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Renaissance Art"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-text text-right">
+                            <span class="timeline-date">XIV – XVI Century</span>
+                            <h3 class="timeline-heading">The Renaissance</h3>
+                            <p>Starting in Florence, the Renaissance marked the rebirth of art, science, and humanism in Europe. Visionaries like Leonardo da Vinci, Michelangelo, and Raphael revolutionized culture under the patronage of families like the Medici. This era gifted the world with the dome of Santa Maria del Fiore.</p>
+                            <a href="https://whc.unesco.org/en/list/174/" target="_blank" class="learn-more-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="timeline-entry">
+                        <div class="timeline-image"><img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&q=80&w=800" alt="Baroque"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-text">
+                            <span class="timeline-date">XVII – XVIII Century</span>
+                            <h3 class="timeline-heading">Baroque Era & Foreign Rule</h3>
+                            <p>The Baroque era brought dramatic artistic expression, epitomized by Bernini and Caravaggio in Rome. Politically, the peninsula was a battleground for foreign powers. Despite political fragmentation, Italy remained a critical center for the Grand Tour and the Enlightenment.</p>
+                            <a href="https://www.britannica.com/art/Baroque-art-and-architecture" target="_blank" class="learn-more-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="timeline-entry entry-reverse">
+                        <div class="timeline-image"><img src="https://images.unsplash.com/photo-1748010613036-aff2931aa1a5?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Risorgimento"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-text text-right">
+                            <span class="timeline-date">1815 – 1861</span>
+                            <h3 class="timeline-heading">Risorgimento (Unification)</h3>
+                            <p>Fueled by nationalist sentiment, the Risorgimento was the movement to unite Italy. Led by figures like Garibaldi and Cavour, the disparate states fought for independence. In 1861, the Kingdom of Italy was officially proclaimed under King Victor Emmanuel II.</p>
+                            <a href="https://en.wikipedia.org/wiki/Unification_of_Italy" target="_blank" class="learn-more-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="timeline-entry">
+                        <div class="timeline-image"><img src="https://images.unsplash.com/photo-1475168952107-64cc48a0c2ed?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kingdom"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-text">
+                            <span class="timeline-date">1861 – 1946</span>
+                            <h3 class="timeline-heading">The Kingdom & World Wars</h3>
+                            <p>Following unification, Rome became the capital in 1870. The country underwent industrialization but faced the turmoil of two World Wars. The interwar period saw the rise of Mussolini and Fascism, leading Italy into the devastation of World War II, which ultimately ended the monarchy.</p>
+                            <a href="https://en.wikipedia.org/wiki/Kingdom_of_Italy" target="_blank" class="learn-more-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="timeline-entry entry-reverse">
+                        <div class="timeline-image"><img src="https://images.unsplash.com/photo-1496347315686-5f274d046ccc?auto=format&fit=crop&q=80&w=800" alt="Modern Italy"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-text text-right">
+                            <span class="timeline-date">1946 – Present</span>
+                            <h3 class="timeline-heading">The Modern Republic</h3>
+                            <p>In 1946, Italians voted to establish a Republic. The post-war years saw an "Economic Miracle" that transformed Italy into a G7 industrial powerhouse. Today, Italy is a global leader in fashion, automotive design, and culinary excellence.</p>
+                            <a href="https://en.wikipedia.org/wiki/History_of_the_Italian_Republic" target="_blank" class="learn-more-link">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="preview-section section-padding bg-cream">
+            <div class="container">
+                <div class="flex-header-between">
+                    <div>
+                        <span class="subtitle-green">Must See</span>
+                        <h2 class="title-serif-dark">Top 3 Destinations</h2>
+                    </div>
+                    <a href="destinations.html" class="link-view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="cards-grid-3">
+                    <div class="preview-card">
+                        <div class="preview-card__image"><img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&q=80&w=800" alt="Rome"></div>
+                        <div class="preview-card__body"><h3 class="preview-card__title">Rome</h3><p>The Eternal City.</p></div>
+                    </div>
+                    <div class="preview-card">
+                        <div class="preview-card__image"><img src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&q=80&w=800" alt="Venice"></div>
+                        <div class="preview-card__body"><h3 class="preview-card__title">Venice</h3><p>City of Canals.</p></div>
+                    </div>
+                    <div class="preview-card">
+                        <div class="preview-card__image"><img src="https://plus.unsplash.com/premium_photo-1676288635850-cd91d5b2a3af?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Florence"></div>
+                        <div class="preview-card__body"><h3 class="preview-card__title">Florence</h3><p>Cradle of Renaissance.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h2>ITALIA<span>.</span></h2>
+          <p>Official Tourism Board.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="routes.html">Routes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <ul>
+            <li class="contact-row">
+              <i class="fas fa-map-marker-alt icon-red"></i> Rome HQ, Via
+              Marghera 2
+            </li>
+            <li class="contact-row">
+              <i class="fas fa-phone-alt icon-green"></i> +39 06 49711
+            </li>
+            <li class="contact-row">
+              <i class="fas fa-envelope"></i> info@italia.it
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a
+            ><a href="#"><i class="fab fa-instagram"></i></a
+            ><a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 Agenzia Nazionale del Turismo. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

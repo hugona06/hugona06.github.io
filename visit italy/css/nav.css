@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
+:root {
+  --color-green: #008c45;
+  --color-red: #cd212a;
+  --color-cream: #f4f5f0;
+  --color-dark: #1a1a1a;
+  --color-gray: #4a4a4a;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  ul {
+    list-style: none;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .main-navigation {
+    background-color: white;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    .mobile-menu-checkbox {
+      display: none;
+    }
+
+    .navigation-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+
+      .logo {
+        font-family: var(--font-serif);
+        font-size: 1.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: var(--color-dark);
+        text-decoration: none;
+
+        span {
+          color: var(--color-red);
+        }
+      }
+
+      .nav-links-desktop {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        .nav-link {
+          font-weight: 600;
+          font-size: 0.95rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          position: relative;
+          color: var(--color-gray);
+          transition: color 0.3s;
+          text-decoration: none;
+
+          &:hover,
+          &.active {
+            color: var(--color-dark);
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--color-green);
+            transition: width 0.3s ease;
+          }
+
+          &:hover::after,
+          &.active::after {
+            width: 100%;
+          }
+        }
+
+        .btn-plan-trip {
+          background-color: var(--color-green);
+          color: white;
+          padding: 12px 28px;
+          border-radius: 30px;
+          font-weight: 600;
+          text-transform: uppercase;
+          font-size: 0.875rem;
+          box-shadow: 0 4px 15px rgba(0, 140, 69, 0.3);
+          transition: all 0.3s ease;
+          text-decoration: none;
+
+          &:hover {
+            background-color: #006b35;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 140, 69, 0.4);
+          }
+        }
+      }
+
+      .mobile-menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--color-dark);
+        background: none;
+        border: none;
+      }
+    }
+
+    .mobile-menu-dropdown {
+      display: none;
+      background-color: white;
+      flex-direction: column;
+      border-top: 1px solid #f0f0f0;
+
+      .mobile-link {
+        display: block;
+        padding: 15px 20px;
+        font-weight: 500;
+        text-decoration: none;
+        border-bottom: 1px solid #f0f0f0;
+        color: var(--color-dark);
+
+        &.highlight {
+          color: var(--color-red);
+        }
+        &:hover {
+          background-color: var(--color-cream);
+          color: var(--color-green);
+        }
+      }
+    }
+
+    &:has(.mobile-menu-checkbox:checked) {
+      .mobile-menu-dropdown {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    .main-navigation {
+      .navigation-container {
+        .nav-links-desktop {
+          display: none;
+        }
+        .mobile-menu-toggle {
+          display: block;
+        }
+      }
+    }
+  }
+}

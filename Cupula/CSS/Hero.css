@@ -1,0 +1,52 @@
+.hero-menu {
+  width: 100%;
+  position: absolute;
+  top: 12vh;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.2);
+
+  .hero-nav {
+    display: flex;
+    gap: 4rem;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: clamp(1.3rem, 1.6vw, 1.8rem);
+      letter-spacing: 0.3rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -4px;
+        left: 50%;
+        background-color: #ddad46;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      &:hover {
+        color: #ddad46;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-menu {
+    display: none;
+  }
+}
